@@ -1,0 +1,4 @@
+UBSCAN:/home/jcsoriano/Documents/COMPILADORES/Proyecto/ide/ejecutable
+MAXDIGIT:5
+MAXLINEA:10
+MAXID:6

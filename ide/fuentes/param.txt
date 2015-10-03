@@ -1,0 +1,7 @@
+UBSCAN;C:\Users\juan\Desktop\Proyecto\ide\fuentes\compilador.exe
+
+MAXDIGIT;5
+
+MAXLINEA;81
+
+MAXID;6
