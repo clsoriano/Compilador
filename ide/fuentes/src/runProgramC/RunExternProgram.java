@@ -16,8 +16,16 @@ public class RunExternProgram {
 
     public String ejecutarCodExtern(String dirArchivo, String dirScanner) {
         String salida = "";
+        String os = System.getProperty("os.name").toLowerCase();
+        String osVersion = System.getProperty("os.arch").toLowerCase();
+        String osArch = System.getProperty("os.version").toLowerCase();
+        String execute = "";
         try {
-            String execute = "cmd /c " + dirScanner + " " + dirArchivo;
+            if (isWindows(os)) {
+                execute = "cmd /c " + dirScanner + " " + dirArchivo + " param.txt";
+            } else if (isUnix(os)) {
+                execute = "./scanner/objeto/scanner ejemplo1.txt param.txt";
+            }
             Runtime rt = Runtime.getRuntime();
             Process pr = rt.exec(execute);
 
@@ -38,4 +46,12 @@ public class RunExternProgram {
         return salida;
     }
 
+    public boolean isWindows(String os) {
+        return (os.indexOf("win") >= 0);
+    }
+
+    public boolean isUnix(String os) {
+        return (os.indexOf("nix") >= 0 || os.indexOf("nux") >= 0 || os.indexOf("aix") >= 0);
+
+    }
 }
