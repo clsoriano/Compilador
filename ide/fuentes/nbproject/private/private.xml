@@ -3,10 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="ABAP"/>
-        <group name="CompiladorABAP">
-            <file>file:/home/jcsoriano/Documents/COMPILADORES/Compilador/ide/fuentes/src/runProgramC/RunExternProgram.java</file>
-            <file>file:/home/jcsoriano/Documents/COMPILADORES/Compilador/ide/fuentes/src/compiladorAbap/funciones/Comunes.java</file>
-        </group>
         <group/>
+        <group name="CompiladorABAP"/>
     </open-files>
 </project-private>

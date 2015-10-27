@@ -68,6 +68,7 @@ public class CompiladorABAP extends Application
     MenuItem acercaD = new MenuItem("Acerca de");
     MenuItem documen = new MenuItem("Documentación");
     ayuda.getItems().addAll(new MenuItem[] { acercaD, documen });
+    this.cm.abrirDoc(documen);
 
     Label msj = new Label("Listo");
     bottomContainer.getChildren().addAll(new Node[] { msj });

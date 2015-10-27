@@ -5,6 +5,7 @@
  */
 package compiladorAbap.funciones;
 
+import java.awt.Desktop;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -55,7 +56,7 @@ public class Comunes {
         ventAviso.setScene(scene);
         ventAviso.show();
     }
-    
+
     public void ventAviso2(String titulo, String mensaje) {
         BorderPane root = new BorderPane();
         Stage ventAviso = new Stage();
@@ -77,7 +78,28 @@ public class Comunes {
         ventAviso.setScene(scene);
         ventAviso.show();
     }
-    
+
+    public void abrirDoc(MenuItem mItem) {
+        mItem.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                File file = new File("ayuda.pdf");
+                new Thread(new Runnable() {
+                    @Override
+
+                    public void run() {
+                        try {
+                            Desktop.getDesktop().open(file);
+                        } catch (Exception e) {
+                            // TODO Auto-generated catch block  
+                            e.printStackTrace();
+                        }
+                    }
+                }).start();
+            }
+        }
+        );
+    }
 
     public void salirBtn(Button btn, Stage stage) {
         btn.setOnAction(new EventHandler<ActionEvent>() {
